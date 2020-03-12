@@ -75,17 +75,17 @@ gulp.task("html", function() {
 //     .pipe(gulp.dest("build/js"))
 // });
 
-// gulp.task("copy", function() {
-//   return gulp.src([
-//       // "source/manifest/site.webmanifest",
-//       "source/fonts/**/*.{woff,woff2}",
-//       "source/img/**",
-//       "!source/img/sprite/**"
-//     ], {
-//       base: "source"
-//     })
-//     .pipe(gulp.dest("build"))
-// });
+gulp.task("copy", function() {
+  return gulp.src([
+      // "source/manifest/site.webmanifest",
+      // "source/fonts/**/*.{woff,woff2}",
+      "source/img/**",
+      "!source/img/sprite/**"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"))
+});
 
 gulp.task("clean", function() {
   return del("build");
@@ -111,5 +111,5 @@ gulp.task("refresh", function(done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean",/* "copy", "css", "sprite", "js",*/ "html"));
+gulp.task("build", gulp.series("clean", "copy",/* "css", "sprite", "js",*/ "html"));
 gulp.task("start", gulp.series("build", "server"));

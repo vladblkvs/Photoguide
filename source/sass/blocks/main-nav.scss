@@ -23,3 +23,7 @@
 .main-nav__link:focus {
   text-decoration: underline;
 }
+
+.main-nav__link:active {
+  opacity: 0.5;
+}

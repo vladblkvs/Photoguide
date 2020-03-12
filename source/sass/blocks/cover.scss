@@ -1,10 +1,183 @@
 .cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 1440px;
   max-width: 100%;
-  min-height: 768px;
+  height: 768px;
   margin: 0 auto;
   background-color: #55aaae;
   background-image: url("../img/cover-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+.cover__caption {
+  position: absolute;
+  right: 70px;
+  top: 75.91%;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.cover__main {
+  width: 680px;
+  margin: 0 auto;
+  padding: 71px 70px 34px;
+  text-align: center;
+}
+
+.cover__title {
+  margin: 0 0 40px;
+  font-family: $font-title;
+  font-size: 90px;
+  line-height: 1;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.cover__text {
+  margin: 0 0 45px;
+  font-size: 26px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.cover__insta-icon {
+  margin-bottom: -9px;
+  fill: #ffffff;
+  outline: none;
+}
+
+.cover__insta-icon:hover,
+.cover__insta-icon:focus {
+  fill: #333333;
+  box-shadow: 0 0 0 2px #f4d269;
+  border-radius: 6px;
+  background-color: #f4d269;
+  cursor: pointer;
+}
+
+.cover__insta-icon:active {
+  background-color: #cfb053;
+}
+
+.cover__contact-link {
+  display: block;
+  max-width: 337px;
+  margin: 0 auto;
+  padding: 25px 52px 24px;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.cover__contact-link:hover,
+.cover__contact-link:focus {
+  background-color: #f4d269;
+}
+
+.cover__contact-link:active {
+  background-color: #cfb053;
+}
+
+.cover__features {
+  padding-left: 70px;
+  background-image: inherit;
+  background-position: bottom center;
+
+  @media (max-width: 1199px) {
+    padding-left: 0;
+  }
+}
+
+.cover__features-inner {
+  position: relative;
+  background-image: inherit;
+  background-position: inherit;
+  overflow: hidden;
+}
+
+.cover__features-inner::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  bottom: -30px;
+  left: -70px;
+  right: 0;
+  background-image: inherit;
+  background-position: inherit;
+  filter: blur(25px);
+
+  @media (max-width: 1199px) {
+    left: 0;
+  }
+}
+
+.cover__features-caption {
+  margin: 0 0 20px;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.2);
+
+  @media (max-width: 1199px) {
+    padding-left: 50px;
+  }
+}
+
+.cover__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  background-image: url("../img/noize.png");
+}
+
+.cover__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 430px;
+  max-width: 33%;
+  min-height: 140px;
+  padding: 45px 10px 45px 120px;
+  color: rgba($color: #ffffff, $alpha: 0.8);
+
+  @media (max-width: 1199px) {
+    padding: 23px 10px 22px 120px;
+
+    & br {
+      display: none;
+    }
+  }
+}
+
+.cover__list > .cover__item + .cover__item::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100px;
+  top: 20px;
+  left: 0;
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+}
+
+.cover__list-icon {
+  position: absolute;
+  top: 45px;
+  left: 50px;
 }

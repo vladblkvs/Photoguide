@@ -55,7 +55,7 @@ var movePhotosToRight = function () {
 
 galleryRightPart.addEventListener('mouseover', movePhotosToLeft);
 
-galleryRightPart.addEventListener('mouseleave', function () {
+photoBlock.addEventListener('mouseleave', function () {
   movePhotosToRight();
 });
 

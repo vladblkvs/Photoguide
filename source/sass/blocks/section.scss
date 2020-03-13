@@ -1,8 +1,12 @@
 .section {
-  padding: 80px;
+  padding: 80px 70px;
 
   @media (max-width: 1199px) {
     padding: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 25px;
   }
 }
 
@@ -21,6 +25,7 @@
   @media (max-width: 1023px) {
     margin: 0 0 12px;
     font-size: 15px;
+    letter-spacing: 5px;
   }
 }
 

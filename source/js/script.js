@@ -25,7 +25,7 @@ var photoBlock = document.querySelector('.gallery__photos');
 var galleryLeftPart = photoBlock.querySelector('.gallery__inner--left');
 var galleryRightPart = photoBlock.querySelector('.gallery__inner--right');
 var GAP = 20;
-var PADDING = 80 * 2;
+var PADDING = 70 * 2;
 
 var movePhotosToLeft = function () {
   if (photoBlock.offsetWidth >= 1200) {
@@ -54,4 +54,8 @@ var movePhotosToRight = function () {
 }
 
 galleryRightPart.addEventListener('mouseover', movePhotosToLeft);
+
+galleryRightPart.addEventListener('mouseleave', function () {
+  movePhotosToRight();
+});
 

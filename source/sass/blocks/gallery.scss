@@ -72,8 +72,8 @@
 .gallery__photos {
   position: relative;
   display: flex;
-  margin: 0 -80px;
-  padding: 0 80px;
+  margin: 0 -70px;
+  padding: 0 70px;
   overflow-x: hidden;
 
   @media (max-width: 1199px) {
@@ -111,7 +111,7 @@
   }
 
   100% {
-    transform: translateX(-460px);
+    transform: translateX(-440px);
   }
 }
 
@@ -121,7 +121,7 @@
 
 @keyframes slideRight {
   0% {
-    transform: translateX(-460px);
+    transform: translateX(-440px);
   }
 
   100% {

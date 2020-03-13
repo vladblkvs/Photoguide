@@ -15,6 +15,20 @@
   <div class="cover">
     <header class="page-header">
       <h1 class="visually-hidden">Photo Guide</h1>
+      <button class="page-header__toggle-menu-btn">
+        <span class="page-header__menu-opener">
+          <span class="visually-hidden">Показать меню</span>
+          <svg class="page-header__menu-icon" width="22" height="22" aria-hidden="true">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </span>
+        <span class="page-header__menu-shutter">
+          <span class="visually-hidden">Скрыть меню</span>
+          <svg class="page-header__menu-icon" width="22" height="22" aria-hidden="true">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </span>
+      </button>
       <div class="page-header__inner">
         <div class="page-header__brand">
           <a class="page-header__logo" aria-label="Photo Guide">
@@ -41,13 +55,15 @@
       </div>
     </header>
     <div class="cover__main">
-      <h2 class="cover__title">Фотосессия в Турции</h2>
+      <h2 class="cover__title">Фотосессия<br>в Турции</h2>
       <p class="cover__text">
-        по цене 7000 рублей за 100 фотографий<br>и 10 одноминутных видео для
-        <svg class="cover__insta-icon" width="156" height="30" tabindex="0" role="link">
-          <title>Instagram</title>
-          <use xlink:href="#icon-instagram" aria-hidden="true"></use>
-        </svg>
+        по цене 7000 рублей за 100&nbsp;фотографий<br>и 10 одноминутных видео для
+        <a class="cover__insta-link" href="#">
+          <span class="visually-hidden">Instagram</span>
+          <svg class="cover__insta-icon" width="156" height="30" aria-hidden="true">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+        </a>
       </p>
       <a class="cover__contact-link" href="#">Связаться с фотографом</a>
     </div>
@@ -78,6 +94,6 @@
     </div>
     <span class="cover__caption" aria-hidden="true">*Турция</span>
   </div>
-
+  <script src="js/script.min.js"></script>
 </body>
 </html>

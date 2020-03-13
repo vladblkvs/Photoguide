@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="fonts/Gilroy-ExtraBold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/ProximaNova-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ProximaNova-ExtraBold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Photoguide</title>
 </head>
@@ -12,87 +13,200 @@
   <div class="visually-hidden" aria-hidden="true">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <div class="cover">
-    <header class="page-header">
-      <h1 class="visually-hidden">Photo Guide</h1>
-      <button class="page-header__toggle-menu-btn">
-        <span class="page-header__menu-opener">
-          <span class="visually-hidden">Показать меню</span>
-          <svg class="page-header__menu-icon" width="22" height="22" aria-hidden="true">
-            <use xlink:href="#icon-menu"></use>
-          </svg>
-        </span>
-        <span class="page-header__menu-shutter">
-          <span class="visually-hidden">Скрыть меню</span>
-          <svg class="page-header__menu-icon" width="22" height="22" aria-hidden="true">
-            <use xlink:href="#icon-close"></use>
-          </svg>
-        </span>
-      </button>
-      <div class="page-header__inner">
-        <div class="page-header__brand">
-          <a class="page-header__logo" aria-label="Photo Guide">
-            <img src="img/logo.svg" alt="Photo Guide" width="189px" height="26px">
-          </a>
-          <p class="page-header__tagline">Stop the time - leave the memories</p>
+  <div class="page-wrapper">
+    <div class="cover">
+      <header class="page-header">
+        <h1 class="visually-hidden">Photo Guide — мы сохраним ваши воспоминания</h1>
+        <button class="page-header__toggle-menu-btn">
+          <span class="page-header__menu-opener">
+            <span class="visually-hidden">Показать меню</span>
+            <svg class="page-header__menu-icon" width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </span>
+          <span class="page-header__menu-shutter">
+            <span class="visually-hidden">Скрыть меню</span>
+            <svg class="page-header__menu-icon" width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </span>
+        </button>
+        <div class="page-header__inner">
+          <div class="page-header__brand">
+            <a class="page-header__logo" aria-label="Photo Guide">
+              <img src="img/logo.svg" alt="Photo Guide" width="189px" height="26px">
+            </a>
+            <p class="page-header__tagline">Stop the time - leave the memories</p>
+          </div>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Цены и услуги</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Контакты</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Отзывы</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Галерея</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Цены и услуги</a>
+      </header>
+      <div class="cover__main">
+        <h2 class="cover__title">Фотосессия<br>в Турции</h2>
+        <p class="cover__text">
+          по цене 7000 рублей за 100&nbsp;фотографий<br>и 10 одноминутных видео для
+          <a class="cover__insta-link" href="#">
+            <span class="visually-hidden">Instagram</span>
+            <svg class="cover__insta-icon" width="156" height="30" aria-hidden="true">
+              <use xlink:href="#icon-instagram"></use>
+            </svg>
+          </a>
+        </p>
+        <a class="cover__contact-link" href="#">Связаться с фотографом</a>
+      </div>
+      <div class="cover__features">
+        <p class="cover__features-caption">Вы получаете</p>
+        <div class="cover__features-inner">
+          <ul class="cover__list">
+            <li class="cover__item">
+              <svg class="cover__list-icon" width="40" height="37" aria-hidden="true">
+                <use xlink:href="#icon-photos"></use>
+              </svg>
+              100 обработанных фото&nbsp;<br>и&nbsp;оригиналы
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Контакты</a>
+            <li class="cover__item">
+              <svg class="cover__list-icon" width="40" height="37" aria-hidden="true">
+                <use xlink:href="#icon-time"></use>
+              </svg>
+              Первые 10 фото и 1&nbsp;видео&nbsp;<br>в&nbsp;течение 24&nbsp;часов
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Отзывы</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Галерея</a>
+            <li class="cover__item">
+              <svg class="cover__list-icon" width="40" height="37" aria-hidden="true">
+                <use xlink:href="#icon-calendar"></use>
+              </svg>
+              Все фотографии через&nbsp;<br>15&nbsp;дней
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
-    </header>
-    <div class="cover__main">
-      <h2 class="cover__title">Фотосессия<br>в Турции</h2>
-      <p class="cover__text">
-        по цене 7000 рублей за 100&nbsp;фотографий<br>и 10 одноминутных видео для
-        <a class="cover__insta-link" href="#">
-          <span class="visually-hidden">Instagram</span>
-          <svg class="cover__insta-icon" width="156" height="30" aria-hidden="true">
-            <use xlink:href="#icon-instagram"></use>
-          </svg>
-        </a>
-      </p>
-      <a class="cover__contact-link" href="#">Связаться с фотографом</a>
+      <span class="cover__caption" aria-hidden="true">*Турция</span>
     </div>
-    <div class="cover__features">
-      <p class="cover__features-caption">Вы получаете</p>
-      <div class="cover__features-inner">
-        <ul class="cover__list">
-          <li class="cover__item">
-            <svg class="cover__list-icon" width="40" height="37" aria-hidden="true">
-              <use xlink:href="#icon-photos"></use>
-            </svg>
-            100 обработанных фото&nbsp;<br>и&nbsp;оригиналы
-          </li>
-          <li class="cover__item">
-            <svg class="cover__list-icon" width="40" height="37" aria-hidden="true">
-              <use xlink:href="#icon-time"></use>
-            </svg>
-            Первые 10 фото и 1&nbsp;видео&nbsp;<br>в&nbsp;течение 24&nbsp;часов
-          </li>
-          <li class="cover__item">
-            <svg class="cover__list-icon" width="40" height="37" aria-hidden="true">
-              <use xlink:href="#icon-calendar"></use>
-            </svg>
-            Все фотографии через&nbsp;<br>15&nbsp;дней
-          </li>
-        </ul>
+    <section class="gallery section">
+      <header class="gallery__header section__header">
+        <h2 class="gallery__title section__title">Галерея</h2>
+        <h3 class="gallery__subtitle section__subtitle">Мы работаем во всех стилях</h3>
+      </header>
+      <ul class="gallery__tag-list">
+        <li class="gallery__tag-item">
+          <a class="gallery__tag-link" href="#">Семейная&nbsp;съемка</a>
+        </li>
+        <li class="gallery__tag-item">
+          <a class="gallery__tag-link" href="#">Love&nbsp;story</a>
+        </li>
+        <li class="gallery__tag-item">
+          <a class="gallery__tag-link" href="#">Lifestyle</a>
+        </li>
+        <li class="gallery__tag-item">
+          <a class="gallery__tag-link gallery__tag-link--active">Fashion</a>
+        </li>
+        <li class="gallery__tag-item">
+          <a class="gallery__tag-link" href="#">Glamour</a>
+        </li>
+      </ul>
+      <div class="gallery__photos">
+        <div class="gallery__inner gallery__inner--left">
+          <div class="gallery__row">
+            <a class="gallery__link" href="#">
+              <span class="gallery__img-enlarger">
+                <svg width="35" height="35" aria-hidden="true">
+                  <use xlink:href="#icon-fullscreen"></use>
+                </svg>
+                Увеличить
+              </span>
+              <img class="gallery__image" src="img/gallery-img-1.jpg" width="420" height="280" alt="Девушка в черно-белом купальнике у бассейна">
+            </a>
+            <a class="gallery__link" href="#">
+              <span class="gallery__img-enlarger">
+                <svg width="35" height="35" aria-hidden="true">
+                  <use xlink:href="#icon-fullscreen"></use>
+                </svg>
+                Увеличить
+              </span>
+              <img class="gallery__image" src="img/gallery-img-2.jpg" width="420" height="280" alt="Вид на бассейн">
+            </a>
+          </div>
+          <div class="gallery__sq">
+            <a class="gallery__link" href="#">
+              <span class="gallery__img-enlarger">
+                <svg width="35" height="35" aria-hidden="true">
+                  <use xlink:href="#icon-fullscreen"></use>
+                </svg>
+                Увеличить
+              </span>
+              <img class="gallery__image gallery__image--lg" src="img/gallery-img-3.jpg" width="860" height="580" alt="Девушка в розовом купальнике у бассейна">
+            </a>
+          </div>
+        </div>
+        <div class="gallery__inner gallery__inner--right">
+          <div class="gallery__sq">
+            <a class="gallery__link" href="#">
+              <span class="gallery__img-enlarger">
+                <svg width="35" height="35" aria-hidden="true">
+                  <use xlink:href="#icon-fullscreen"></use>
+                </svg>
+                Увеличить
+              </span>
+              <img class="gallery__image gallery__image--md" src="img/gallery-img-4.jpg" width="420" height="580" alt="Девушка в черно-белом купальнике в углу бассейна">
+            </a>
+            <div class="gallery__col">
+              <a class="gallery__link" href="#">
+                <span class="gallery__img-enlarger">
+                  <svg width="35" height="35" aria-hidden="true">
+                    <use xlink:href="#icon-fullscreen"></use>
+                  </svg>
+                  Увеличить
+                </span>
+                <img class="gallery__image" src="img/gallery-img-5.jpg" width="420" height="280" alt="Девушка в розовом купальнике выходит из бассейна">
+              </a>
+              <a class="gallery__link" href="#">
+                <span class="gallery__img-enlarger">
+                  <svg width="35" height="35" aria-hidden="true">
+                    <use xlink:href="#icon-fullscreen"></use>
+                  </svg>
+                  Увеличить
+                </span>
+                <img class="gallery__image" src="img/gallery-img-6.jpg" width="420" height="280" alt="Девушка в розовом купальнике у бассейна на пуфике">
+              </a>
+            </div>
+          </div>
+          <div class="gallery__row">
+            <a class="gallery__link" href="#">
+              <span class="gallery__img-enlarger">
+                <svg width="35" height="35" aria-hidden="true">
+                  <use xlink:href="#icon-fullscreen"></use>
+                </svg>
+                Увеличить
+              </span>
+              <img class="gallery__image" src="img/gallery-img-7.jpg" width="420" height="280" alt="Девушка в черно-белом купальнике под душем">
+            </a>
+            <a class="gallery__link" href="#">
+              <span class="gallery__img-enlarger">
+                <svg width="35" height="35" aria-hidden="true">
+                  <use xlink:href="#icon-fullscreen"></use>
+                </svg>
+                Увеличить
+              </span>
+              <img class="gallery__image" src="img/gallery-img-8.jpg" width="420" height="280" alt="Девушка в розовом купальнике на берегу моря">
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <span class="cover__caption" aria-hidden="true">*Турция</span>
+    </section>
   </div>
   <script src="js/script.min.js"></script>
 </body>
